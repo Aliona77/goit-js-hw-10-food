@@ -1,19 +1,19 @@
-import menuItem from './menu.json';
-
-import menuTempate from './templates/tempates.hbs';
-
-console.log(menuTempate);
-
+import templateCard from './templates/template.hbs';
+import food from './menu.json';
 import './styles.css';
 
 
 ///Розмітка 
-let menu = document.querySelector('.js-menu');
+
+const menu = document.querySelector('.js-menu');
+     console.log(menu);
 
 function createMenu(food) {
-    const markup = food.map(create => menuItem(create)).join('');
-    menu.insertAdjacentHTML('beforeend', markup);
+    return food.map(templateCard).join('');
 }
-createMenu(menuItem);
+
+const markup = createMenu(food);
+menu.insertAdjacentHTML('beforeend', markup);
+
 
 ////Зміна теми
