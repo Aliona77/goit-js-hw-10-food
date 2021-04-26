@@ -16,4 +16,4 @@ const markup = createMenu(food);
 menu.insertAdjacentHTML('beforeend', markup);
 
 
-////Зміна теми
+//                               ТЕМА
